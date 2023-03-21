@@ -1,0 +1,13 @@
+<p>My Cart</p>
+
+<div *ngIf="cart.length <= 0">
+    <h2>Your cart is empty</h2>
+</div>
+
+<div *ngIf="cart.length >= 0">
+    <div *ngFor="let inv of cart; let idx = index">
+        <img [src]="inv.image" width="50">
+    <h2>{{ inv.name }} </h2>
+    <button type="button" (click)="deleteItem(idx)">Delete</button>
+  </div>
+</div>

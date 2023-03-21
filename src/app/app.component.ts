@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomerSelect } from './models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'workshop31';
+
+  cart: CustomerSelect[] = []
+
+  addToCart(added: CustomerSelect) {
+    console.info('>>> app.component selected: ', added)
+
+    this.cart.push(added)
+  }
+
+  deleteItem(index: number) {
+    // Start at index 1, delete 1 item
+    this.cart.splice(index, 1)
+  }
 }
+

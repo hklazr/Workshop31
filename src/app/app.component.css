@@ -1,0 +1,14 @@
+/* .center-it {
+    text-align: center;
+  } */
+  
+  .side-by-side {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  app-inventory, app-cart {
+    width: 50%;
+  }
+  

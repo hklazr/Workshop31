@@ -1,0 +1,38 @@
+<p>Please Select</p>
+
+<!-- <table>
+    <tr>
+        <td> 
+            <img src="/assets/fruits/apple.png" class="thumbnail">
+            <button type="button" (click)="addQuantity(1)"> Add </button>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <img src="/assets/fruits/acorn_squash.png" class="thumbnail">
+            <button> Add </button>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <img src="/assets/fruits/bell_pepper.png" class="thumbnail">
+            <button> Add </button>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <img src="/assets/fruits/blueberries.png" class="thumbnail">
+            <button> Add </button>
+        </td>
+    </tr>
+</table> -->
+
+<div *ngFor="let inv of inventory" class="inventory">
+    <img [src]="inv.image" width="50">
+    <br>
+    <span>{{inv.name }}</span>
+    <!-- <button type="button" (click)="addQuantity(-1);">-</button>
+    <button type="button" (click)="addQuantity(1);">+</button> -->
+    <button type="button" (click)="addToCart(inv.name, inv.image)">Add </button>
+</div>
+
